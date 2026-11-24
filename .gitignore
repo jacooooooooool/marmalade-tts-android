@@ -59,3 +59,20 @@ docs/release/*-lab.html
 docs/design/*-lab.html
 docs/design/labs.json
 docs/design/pocket-voices/
+
+# Lokalne modele i pliki tymczasowe
+*.onnx
+*.onnx.json
+*.gz
+*.tar.bz2
+espeak-ng-data/
+*.fixed
+*.modification
+*.patch
+
+# Ignorowane pliki tymczasowe i modele
+pl-bass-high/
+pl-gosia-medium/
+*.tar.gz
+*.onnx
+*.onnx.json

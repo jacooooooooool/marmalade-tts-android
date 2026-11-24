@@ -644,6 +644,56 @@ object VoicePackCatalog {
         released = true,
     )
 
+    /**
+     * Polish "Gosia" voice pack, 22.05 kHz `medium` tier, espeak-mode (config voice `"pl"`).
+     *
+     * This is the pl_PL-gosia-medium checkpoint from csukuangfj's repository.
+     * The voice was trained on Polish LJSpeech and the model uses a medium VITS
+     * architecture with an estimated 58 MB download size. This pack includes
+     * proper pronunciation for Polish text using espeak-ng phonemization.
+     */
+    val PL_GOSIA_MEDIUM: VoicePack = VoicePack(
+        id = "pl-gosia-medium",
+        engine = VITS_MARMALADE_ENGINE,
+        languageCode = "pl-PL",
+        displayName = "Gosia (Polish)",
+        qualityTier = "medium",
+        quality = QualityGrade.GOOD,
+        sampleRate = 22_050,
+        gender = "female",
+        archive = EngineArchive(
+            url = "https://github.com/jacooooooooool/marmalade-tts-android/releases/download/v1.0-pl/pl-gosia-medium.tar.gz",
+            sha256 = "175940d3cc7dc42e8f3d072396b29949ca320982f982e515d299303ae6f497c3",
+            sizeBytes = 58_290_329L,
+            archiveRoot = "pl-gosia-medium/",
+        ),
+        installedSizeBytes = 63_228_115L,
+        licenseNotice = VITS_MARMALADE_LICENSE_NOTICE,
+        credit = VoiceCredit(source = "Rhasspy Piper (Gosia)", license = "MIT"),
+        released = true,
+    )
+    val PL_BASS_HIGH: VoicePack = VoicePack(
+        id = "pl-bass-high",
+        engine = VITS_MARMALADE_ENGINE,
+        languageCode = "pl-PL",
+        displayName = "Bass (Polish)",
+        qualityTier = "high",
+        quality = QualityGrade.GOOD,
+        sampleRate = 22_050,
+        gender = "male",
+        archive = EngineArchive(
+            url = "https://github.com/jacooooooooool/marmalade-tts-android/releases/download/v1.0-pl/pl-bass-high.tar.gz",
+            sha256 = "9dc81d47b956a6e1a3daf43108a2c630de45e52ff1455ce915b9f7c39f3e4bc9",
+            sizeBytes = 105_541_457L,
+            archiveRoot = "pl-bass-high/",
+        ),
+        installedSizeBytes = 114_208_978L,
+        licenseNotice = VITS_MARMALADE_LICENSE_NOTICE,
+        credit = VoiceCredit(source = "Rhasspy Piper (Bass)", license = "MIT"),
+        released = true,
+    )
+
+
     /** Every voice pack the app knows how to install. Read-only. */
     val all: List<VoicePack> = listOf(
         UK_LADA_X_LOW,
@@ -656,6 +706,8 @@ object VoicePackCatalog {
         NO_NVCC_MEDIUM,
         UK_UKRAINIAN_TTS_MEDIUM,
         EN_JENNY_DIOCO_MEDIUM,
+        PL_GOSIA_MEDIUM,
+        PL_BASS_HIGH,
     )
 
     /** Lookup by [VoicePack.id]. Null for unknown packs. */

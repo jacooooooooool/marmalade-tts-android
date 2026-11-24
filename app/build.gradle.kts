@@ -394,6 +394,7 @@ run {
     val bakedEngineRel = "espeak/espeak-ng-data"
 
     val generateEspeakData = tasks.register("generateEspeakData") {
+        enabled = false
         group = "build"
         description = "Compile the full espeak-ng-data set from the espeak-ng submodule for the app-level shared phonemizer data."
         // Incrementality: rerun only when the generator or the espeak sources change.
